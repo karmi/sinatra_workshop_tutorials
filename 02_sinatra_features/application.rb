@@ -1,24 +1,22 @@
 require 'rubygems'
 require 'sinatra'
 
-get '/' do
-  "Hello, world!"
+helpers do
+
+  def decorated(string)
+    "&hearts;#{string}&hearts;"
+  end
+
+  def human_date(datetime)
+    datetime.strftime('%d. %B %Y')
+  end
+
 end
 
-get '/special' do
-  "Hello, special!"
+get '/decorated/:name' do
+  "Oh, hello, #{decorated( params[:name] )}!"
 end
 
-get '/:name' do
-  "Hello, #{params[:name]}!"
-end
-
-# GET http://localhost:4567/download/file.txt
-get '/download/*.*' do
-  "Got #{params[:splat].inspect}"  # Broken in < 0.9.0.4 (eats first letter)
-end
-
-# GET http://localhost:4567/hello/123-start
-get %r{/hello/(\d{0,4})\-([\w]+)} do
-  "Hello, #{params[:captures].inspect}!"
+get '/date' do
+  human_date( Time.now )
 end
