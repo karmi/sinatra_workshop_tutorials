@@ -1,3 +1,6 @@
+# Load Sinatra from edge instead from gem's
+$LOAD_PATH.unshift File.join( File.dirname(__FILE__), '..', 'vendor/sinatra-sinatra/lib' )
+
 require 'rubygems'
 require 'sinatra'
 
@@ -23,4 +26,8 @@ get %r{/views/(.+\..{1,4})} do
   filename = params[:captures]
   @file = { :name => filename, :contents => File.read( File.join(Sinatra::Application.views, filename) ) }
   erb :item
+end
+
+get '/about' do
+  "I'm running on Sinatra version " + Sinatra::VERSION
 end
