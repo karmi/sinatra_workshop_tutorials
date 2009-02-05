@@ -6,7 +6,7 @@ before do
 end
 
 error do
-  "We're so sorry... #{request.env['sinatra.error'].message}"
+  File.read('public/500.html')
 end
 
 get '/' do
