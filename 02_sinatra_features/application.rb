@@ -1,16 +1,17 @@
 require 'rubygems'
 require 'sinatra'
 
-# $ ruby application.rb
-configure do
-  PASSWORD = 'password'
+before do
+  @views = Dir['views/*.*'].entries.collect { |f| { :name => File.basename(f), :size => File.size(f) } }
 end
 
-# $ ruby application.rb -e production -p 5678
-configure :production do
-  PASSWORD = '5f4dcc3b5aa765d61d8327deb882cf99'
+get '/' do
+  erb :index
 end
 
-get '/:password' do
-  params[:password] == PASSWORD ? '&iexcl;Welcome!' : 'What?'
+# GET http://localhost:4567/views/index.erb
+get %r{/views/(.+\..{1,4})} do
+  filename = params[:captures]
+  @file = { :name => filename, :contents => File.read("views/#{filename}") }
+  erb :item
 end

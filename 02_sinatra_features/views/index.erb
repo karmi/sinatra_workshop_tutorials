@@ -1,0 +1,11 @@
+<h2>You have <%= @views.size %> templates available:</h3>
+
+<ul>
+
+<% @views.each do |file| %>
+
+  <li><a href="/views/<%= file[:name] %>"><%= file[:name] %></a> <em>(<%= file[:size] %> B)</em></li>
+
+<% end %>
+
+</ul>
