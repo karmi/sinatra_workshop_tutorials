@@ -1,0 +1,5 @@
+= Sinatra workshop code
+
+Collection of small apps to demonstrate Sinatra and it's world.
+
+(c) 2009 Karel Minarik by Do Anything You Want With It licence
