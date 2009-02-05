@@ -2,4 +2,18 @@
 
 Collection of small apps to demonstrate Sinatra and it's world.
 
-(c) 2009 Karel Minarik by Do Anything You Want With It licence
+It's a showcase of:
+
+1. Rack
+2. Sinatra features
+3. Small CRUD/REST application
+4. Rails Metal and Sinatra
+
+Follow and checkout Git commits for step by step tutorial
+
+== TODO
+
+* Rails Metal code
+* Tags for easy step-by-step following
+
+(c) 2009 Karel Minarik under MIT licence
