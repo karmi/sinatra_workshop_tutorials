@@ -1,0 +1,14 @@
+require 'rake'
+
+task :default => 'start'
+
+desc "Start application with Thin"
+task :start do
+  system "thin --rackup config.ru --daemonize --log thin.log --pid thin.pid --environment production --port 4000 start"
+  puts "> Thin started on http://localhost:4000, application mounted at http://localhost:4000/sinatra"
+end
+
+desc "Stop Thin server"
+task :stop do
+  system "thin --pid thin.pid stop"
+end

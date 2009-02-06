@@ -1,33 +1,22 @@
-# Load Sinatra from edge instead from gem's
-$LOAD_PATH.unshift File.join( File.dirname(__FILE__), '..', 'vendor/sinatra-sinatra/lib' )
+require 'sinatra/base'
 
-require 'rubygems'
-require 'sinatra'
+class Application < Sinatra::Base
 
-set :views,       'templates'
-set :environment, 'production'
+  enable :logging
 
-before do
-  @views = Dir["#{Sinatra::Application.views}/*.*"].entries.collect do |f|
-    { :name => File.basename(f), :size => File.size(f) }
+  get '/?' do
+    "Hello, Rack world!"
   end
+
 end
 
-error do
-  File.read('public/500.html')
-end
+Application.run! if __FILE__ == $0
 
-get '/' do
-  erb :index
-end
 
-# GET http://localhost:4567/views/index.erb
-get %r{/views/(.+\..{1,4})} do
-  filename = params[:captures]
-  @file = { :name => filename, :contents => File.read( File.join(Sinatra::Application.views, filename) ) }
-  erb :item
-end
-
-get '/about' do
-  "I'm running on Sinatra version " + Sinatra::VERSION
-end
+# Run with 
+#   $ ruby application.rb
+# or +rackup+
+#   $ rackup --server webrick --port 4000 --env production
+# or +thin+
+#   $ rake start
+#   $ thin --rackup config.ru --daemonize --log thin.log --pid thin.pid --environment production --port 4000 start

@@ -2,6 +2,7 @@
 */.DS_Store
 *.log
 *.db
+*.pid
 config.yml
 deploy.rb
 **/config.yml
