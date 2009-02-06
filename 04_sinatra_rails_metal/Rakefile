@@ -1,0 +1,33 @@
+require 'rake'
+
+def echo(s)
+  puts "*** Executing: ***\n$ #{s}"
+  sleep 1
+end
+
+task :default => 'rails:up'
+
+namespace :rails do
+
+  task :up do
+    cmd = "rails_edge metal -m rails_template.rb -d mysql"
+    echo cmd
+    system cmd
+    cmd = "cd metal && script/server"
+    echo cmd
+    system cmd
+  end
+
+  task :down do
+    cmd = "rm -rf metal && echo 'DROP DATABASE metal_development; DROP DATABASE metal_production' | mysql -uroot"
+    echo cmd
+    system cmd
+  end
+
+end
+
+task :metal do
+  cmd = "cd metal && script/generate metal api && mate app/metal/api.rb"
+  echo cmd
+  system cmd
+end
