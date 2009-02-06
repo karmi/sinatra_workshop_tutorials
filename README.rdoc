@@ -1,6 +1,6 @@
 = Sinatra workshop code
 
-Collection of small apps to demonstrate Sinatra and it's world.
+Collection of small apps to demonstrate Sinatra micro-framework and it's world.
 
 == Contents
 
@@ -17,6 +17,10 @@ Building simple CRUD/REST application in one file in <tt>03_sinatra_crud_rest</t
 Demonstrating use Sinatra as a Rails Metal application in <tt>04_sinatra_metal</tt>
 
 == Tutorial
+
+Clone the repository by doing:
+
+  $ git://github.com/karmi/sinatra_workshop_tutorials.git
 
 Open the commits listing either locally or on _Github_ to have an overview what's going on.
 
