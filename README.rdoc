@@ -4,21 +4,17 @@ Collection of small apps to demonstrate Sinatra and it's world.
 
 == Contents
 
-=== Rack
-Demonstrating basic Rack concepts in +01_rack+.
-Tags 1 -- 3
+=== Rack <i>(tags 1 - 3)</i>
+Demonstrating basic Rack concepts in <tt>01_rack</tt>.
 
-=== Sinatra features
-Demonstrating Sinatra concepts and features in +02_sinatra_features+
-Tags 4 -- 17
+=== Sinatra features <i>(tags 4 - 17)</i>
+Demonstrating Sinatra concepts and features in <tt>02_sinatra_features</tt>
 
-=== Small CRUD/REST application
-Building simple CRUD/REST application in one file in +03_sinatra_crud_rest+, step-by-step
-Tags 18 -- 20
+=== Small CRUD/REST application <i>(tags 18 - 20)</i>
+Building simple CRUD/REST application in one file in <tt>03_sinatra_crud_rest</tt>, step-by-step
 
-=== Rails Metal and Sinatra
-Demonstrating use Sinatra as a Rails Metal application in +04_sinatra_metal+
-Tag 21
+=== Rails Metal and Sinatra <i>(tag 21)</i>
+Demonstrating use Sinatra as a Rails Metal application in <tt>04_sinatra_metal</tt>
 
 == Tutorial
 
