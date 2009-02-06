@@ -1,0 +1,30 @@
+= Sinatra as Rails Metal
+
+Steps:
+
+1. Install Edge Rails:
+
+  $ cd ~/
+  $ git clone git://github.com/rails/rails.git
+
+2. Generate Rails 2.3 application by running:
+
+  $ ruby ~/rails/railties/bin/rails metal -m rails_template.rb -d mysql
+
+3. Generate new Metal:
+  
+  $ cd metal && script/generate metal api
+
+4. Copy Sinatra to Metal:
+
+  $ cp ../metal.example.rb app/metal/api.rb
+
+5. Run Rails:
+
+  $ script/server
+
+6. Try out Metal (http://localhost:3000/api/products/953125641/in_stock.json etc)
+
+7. Stop Rails and run Metal in separate process:
+
+  $ rackup app/metal/api.rb -p 4000
