@@ -1,0 +1,11 @@
+= Rails
+$ ab -n 1000 http://127.0.0.1:3000/products/953125641/in_stock.json
+...
+Requests per second:    199.30 [#/sec] (mean)
+Time per request:       5.018 [ms] (mean)
+
+= Sinatra
+$ ab -n 100 http://0.0.0.0:3000/api/products/953125641/in_stock.json
+...
+Requests per second:    0.99 [#/sec] (mean)
+Time per request:       1005.771 [ms] (mean)
