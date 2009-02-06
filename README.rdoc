@@ -35,4 +35,6 @@ You can always reset things to default by doing:
 
   $ git checkout master
 
-(c) 2009 Karel Minarik under MIT licence
+--
+
+Created in 2009 by Karel Minarik [www.karmi.cz]
