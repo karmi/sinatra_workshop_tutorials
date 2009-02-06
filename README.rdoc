@@ -2,18 +2,41 @@
 
 Collection of small apps to demonstrate Sinatra and it's world.
 
-It's a showcase of:
+== Contents
 
-1. Rack
-2. Sinatra features
-3. Small CRUD/REST application
-4. Rails Metal and Sinatra
+=== Rack
+Demonstrating basic Rack concepts in +01_rack+.
+Tags 1 -- 3
 
-Follow and checkout Git commits for step by step tutorial
+=== Sinatra features
+Demonstrating Sinatra concepts and features in +02_sinatra_features+
+Tags 4 -- 17
 
-== TODO
+=== Small CRUD/REST application
+Building simple CRUD/REST application in one file in +03_sinatra_crud_rest+, step-by-step
+Tags 18 -- 20
 
-* Rails Metal code
-* Tags for easy step-by-step following
+=== Rails Metal and Sinatra
+Demonstrating use Sinatra as a Rails Metal application in +04_sinatra_metal+
+Tag 21
+
+== Tutorial
+
+Open the commits listing either locally or on _Github_ to have an overview what's going on.
+
+Every important step of the tutorial is saved in _Git_ tags.
+
+Continually check them by running
+
+  $ git checkout 1
+  $ git checkout 1
+  ...
+  $ git checkout 21
+
+and inspect/run relevant files.
+  
+You can always reset things to default by doing:
+
+  $ git checkout master
 
 (c) 2009 Karel Minarik under MIT licence
